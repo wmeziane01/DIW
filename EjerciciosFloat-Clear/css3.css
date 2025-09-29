@@ -1,0 +1,16 @@
+.div2{
+    float: left;
+    background-color: aqua;
+    text-align: center;
+}
+.div1{
+    float: right;
+    background-color: blueviolet;
+    padding: 50px;
+    text-align: center;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}

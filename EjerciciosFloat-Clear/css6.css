@@ -1,0 +1,12 @@
+.texto{
+    width: 75%;
+    margin: 10px;
+    float: right;
+    text-align: justify;
+    font-size: 18px;
+}
+img{
+    width: 20%;
+    float: left;
+    margin: 10px;
+}

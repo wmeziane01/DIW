@@ -1,0 +1,23 @@
+.div1{
+    float: right;
+    background-color: rgb(245, 120, 203);
+    padding: 50px;
+    text-align: center;
+}
+.div2{
+    float: left;
+    background-color: aqua;
+    padding: 50px;
+    text-align: center;
+}
+.div3{
+    float: left;
+    background-color: orangered;
+    padding: 50px;
+    text-align: center;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
