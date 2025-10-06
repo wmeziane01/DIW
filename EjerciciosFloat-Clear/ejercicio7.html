@@ -15,7 +15,7 @@
       padding: 15px;
     }
 
-  /*  .column {
+    .column {
       float: left;
       padding: 15px;
     }
@@ -32,7 +32,7 @@
 
     .content {
       width: 75%;
-    }*/
+    }
 
     .menu ul {
       list-style-type: none;
@@ -46,63 +46,6 @@
       background-color: #33b5e5;
       color: #ffffff;
     }
-    * {
-  box-sizing: border-box;
-}
-
-/* Contenedor principal */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* clearfix para las filas */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Estilo base para todas las columnas */
-[class*="col-"] {
-  float: left;
-  width: 100%; /* Por defecto, ocupan todo el ancho */
-  padding: 15px;
-}
-
-
-@media (min-width: 600px) {
-  /* Definición de anchos para cada columna */
-.col-sm-1 { width: 8.33333%; }
-.col-sm-2 { width: 16.66667%; }
-.col-sm-3 { width: 25%; }
-.col-sm-4 { width: 33.33333%; }
-.col-sm-5 { width: 41.66667%; }
-.col-sm-6 { width: 50%; }
-.col-sm-7 { width: 58.33333%; }
-.col-sm-8 { width: 66.66667%; }
-.col-sm-9 { width: 75%; }
-.col-sm-10 { width: 83.33333%; }
-.col-sm-11 { width: 91.66667%; }
-.col-sm-12 { width: 100%; }
-
-}
-@media (min-width: 900px) {
-  /* Definición de anchos para cada columna */
-.col-lg-1 { width: 8.33333%; }
-.col-lg-2 { width: 16.66667%; }
-.col-lg-3 { width: 25%; }
-.col-lg-4 { width: 33.33333%; }
-.col-lg-5 { width: 41.66667%; }
-.col-lg-6 { width: 50%; }
-.col-lg-7 { width: 58.33333%; }
-.col-lg-8 { width: 66.66667%; }
-.col-lg-9 { width: 75%; }
-.col-lg-10 { width: 83.33333%; }
-.col-lg-11 { width: 91.66667%; }
-.col-lg-12 { width: 100%; }
-
-}
   </style>
 </head>
 
@@ -111,8 +54,8 @@
     <h1>Cabecera</h1>
   </div>
 
-  <div class="row">
-    <div class="col-sm-3 col-lg-2 menu">
+  <div class="clearfix">
+    <div class="column menu">
       <ul>
         <li>Lorem</li>
         <li>Ipsum</li>
@@ -121,7 +64,7 @@
       </ul>
     </div>
 
-    <div class="col-9 col-lg-10 content">
+    <div class="column content">
       <h1>Lorem ipsum</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illum cum quidem! Velit minima libero quasi aspernatur commodi explicabo adipisci, quis facilis, veniam, quae aperiam unde numquam magnam minus nesciunt.</p>
       <p>Veritatis numquam fugiat rem odit perferendis maiores delectus et reiciendis, saepe optio ipsum facere ipsam accusantium maxime ab deleniti neque quod? Vitae, nulla illo deleniti commodi quaerat ab tempora dicta!</p>
