@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Bookify</title>
+
+  <link rel="stylesheet" href="css/columnas.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a id="top"></a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="img/logo.svg" alt="Bookify logo" width="50" height="50">
+        <span class="brand">Bookify</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="contacto.html" class="nav-link active">Contacto</a>
+        <a href="index.html#faq" class="nav-link">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content" role="main">
+
+    <section class="contact-top card">
+      <h1>Contacto</h1>
+      <p>Si tienes dudas, sugerencias o quieres colaborar, utiliza el formulario o los datos de contacto.</p>
+    </section>
+
+    <section class="row contact-section">
+      <div class="col-4 col-sm-4">
+        <!-- Información de contacto: card con fondo verde -->
+        <div class="card contact-card contact-info">
+          <h3>Información</h3>
+          <p><strong>Dirección:</strong><br> Calle Falsa 123, Ciudad</p>
+          <p><strong>Teléfono:</strong><br> +34 600 000 000</p>
+          <p><strong>Email:</strong><br> info@bookify.example</p>
+          <p><strong>Horario:</strong><br> Lun-Vie 9:00 – 18:00</p>
+
+          <div class="socials">
+            <p>Redes:</p>
+            <ul>
+              <li><a href="#" aria-label="Twitter">Twitter</a></li>
+              <li><a href="#" aria-label="Facebook">Facebook</a></li>
+              <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-8 col-sm-8">
+        <!-- Formulario -->
+        <form class="card contact-form" action="#" method="post" novalidate>
+          <h3>Envíanos un mensaje</h3>
+
+          <label for="name">Nombre *</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="phone">Teléfono *</label>
+          <input id="phone" name="phone" type="tel" required>
+
+          <label for="subject">Asunto *</label>
+          <input id="subject" name="subject" type="text" required>
+
+          <label for="reason">Motivo *</label>
+          <select id="reason" name="reason" required>
+            <option value="soporte">Soporte técnico</option>
+            <option value="sugerencias">Sugerencias</option>
+            <option value="colaboracion">Colaboración</option>
+            <option value="otro">Otro</option>
+          </select>
+
+          <label for="message">Mensaje *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <label class="checkbox">
+            <input type="checkbox" name="newsletter" value="si">
+            Suscribirme a la newsletter
+          </label>
+
+          <div class="form-actions">
+            <button type="reset" class="btn btn-secondary">Limpiar</button>
+            <button type="submit" class="btn">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ sección local -->
+    <section class="card faq">
+      <h2>Preguntas frecuentes (Contacto)</h2>
+      <dl>
+        <dt>¿Cuánto tarda la respuesta?</dt>
+        <dd>Normalmente respondemos en 48-72 horas hábiles.</dd>
+
+        <dt>¿Puedo solicitar colaboración académica?</dt>
+        <dd>Sí. Elige "Colaboración" en el select del formulario.</dd>
+
+        <dt>¿Qué formatos aceptáis?</dt>
+        <dd>ePub, PDF y otros formatos estándar para lectura digital.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <a href="#top" class="scroll-top" aria-label="Volver arriba">↑</a>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">Bookify | © 2025</div>
+      <div class="footer-right">Autor: John Doe</div>
+    </div>
+  </footer>
+
+</body>
+</html>

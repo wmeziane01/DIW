@@ -1,0 +1,392 @@
+/* styles.css
+   Estilos principales para la práctica Bookify
+   Maquetación tradicional: float, position y media queries
+*/
+
+/* =========================
+   VARIABLES & RESET BASICO
+   ========================= */
+:root{
+  --bg-body: #faf9f6;
+  --brand: #2c5530;
+  --accent: #ff6b35;
+  --shadow-color: #d4d4aa;
+  --button-hover: #1a3d1e;
+  --scroll-bg: #ff6b35;
+  --scroll-bg-hover: #e55a2b;
+  --text-highlight: #8b4513;
+
+  --container-max: 1100px;
+  --border-radius: 10px;
+  --card-padding: 18px;
+  --transition-fast: 0.25s ease;
+}
+
+/* Tipografías (serif obligatorio) */
+body{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: var(--bg-body);
+  color: #222;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth; /* scroll suave */
+}
+
+/* Contenedor central */
+.container{
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   HEADER
+   - fijo, fondo verde oscuro, logo y nav a la derecha
+   ===================================================== */
+.site-header{
+  background: var(--brand);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-inner{
+  display: block; /* no usar flex */
+  height: 70px;
+  line-height: 70px; /* centra verticalmente elementos inline */
+}
+
+/* Logo + texto */
+.logo-link{
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-link img{
+  vertical-align: middle;
+  margin-right: 10px;
+  /* mantener tamaño 50x50 como pide en la práctica */
+}
+
+/* Texto de marca centrado verticalmente con lorem */
+.logo-link .brand{
+  font-weight: 700;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+/* Navegación: alineada a la derecha con float */
+.main-nav{
+  float: right;
+  margin-top: 0;
+}
+
+.main-nav .nav-link{
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 12px;
+  transition: color var(--transition-fast);
+}
+
+/* link activo */
+.main-nav .nav-link.active,
+.main-nav .nav-link:hover{
+  color: var(--accent);
+}
+
+/* Dejar espacio para el header fijo en el main */
+.main-content{
+  padding-top: 90px; /* debe ser mayor que la altura del header */
+  padding-bottom: 40px;
+}
+
+/* =========================
+   CARDS (tarjetas)
+   ========================= */
+.card{
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06);
+  padding: var(--card-padding);
+  margin-bottom: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+/* Hover: elevar 10px y sombra mayor */
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+/* Imágenes dentro de tarjetas: responsive y evitar CLS (width & height en HTML) */
+.card img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+/* card body */
+.card-body h2, .card-body h3{
+  margin-top: 0;
+  color: var(--brand);
+}
+
+/* Small helpers */
+.counter{ color: var(--text-highlight); font-weight: 600; }
+
+/* =========================
+   BOTONES
+   ========================= */
+.btn{
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn:hover{
+  background: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Botón secundario */
+.btn-secondary{
+  background: #d4d4aa;
+  color: #222;
+}
+
+.btn-secondary:hover{
+  background: #bfbf92;
+}
+
+/* En móviles, botones ocupan 100% */
+@media (max-width: 599px){
+  .btn, .btn-secondary{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* =========================
+   SISTEMA DE FILAS (clearfix)
+   ========================= */
+/* Las reglas de columnas reales están en columnas.css proporcionado
+   Aquí aseguramos comportamiento mobile-first: por defecto col-* 100% */
+[class*="col-"]{
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* clearfix clásico para .row */
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* =========================
+   EJEMPLOS ADICIONALES DE ESTILOS
+   ========================= */
+.hero{
+  text-align: left;
+  padding: 30px;
+}
+
+.featured-book .card-body ul,
+.service-card ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* Sidebar small lists */
+.news-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.news-list li{
+  margin-bottom: 12px;
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 10px;
+}
+
+/* Servicios y genre cards */
+.genre-card .card-body,
+.service-card .card-body{
+  padding: 12px 0;
+}
+
+/* Contact form */
+.contact-card.contact-info{
+  background: #2c5530;
+  color: #fff;
+}
+
+/* Form styles */
+.contact-form label{
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea{
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.contact-form textarea{
+  resize: vertical;
+}
+.checkbox{
+  margin-top: 12px;
+  display: block;
+}
+
+/* Form actions: botones alineados a la derecha en escritorio */
+.form-actions{
+  margin-top: 12px;
+  text-align: right;
+}
+@media (max-width: 599px){
+  .form-actions{ text-align: center; }
+}
+
+/* FAQ */
+.faq dl dt{
+  font-weight: 700;
+  margin-top: 12px;
+}
+.faq dl dd{
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   SCROLL TO TOP
+   ========================= */
+.scroll-top{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 24px;
+  background: var(--scroll-bg);
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  z-index: 1100;
+}
+
+/* hover */
+.scroll-top:hover{
+  background: var(--scroll-bg-hover);
+  transform: translateY(-4px);
+}
+
+/* invisible en móviles (se muestra a partir de 600px) */
+@media (max-width: 599px){
+  .scroll-top{ display: none; }
+}
+
+/* =========================
+   RESPONSIVE: BREAKPOINTS 600px, 750px, 900px
+   Mobile-first: por defecto columnas 100% (ya aplicadas arriba)
+   Ajustamos tamaños usando media queries
+   ========================= */
+
+/* >= 600px: activar grid de columnas (se asume columnas.css define col-sm-*),
+   si tu columnas.css tiene .col-sm-* se aplicarán; sino puedes usar .col-* */
+@media (min-width: 600px){
+  /* ejemplo: si columnas.css no está presente, definimos algunas clases básicas */
+  .col-sm-4 { width: 33.33333%; }
+  .col-sm-6 { width: 50%; }
+  .col-sm-8 { width: 66.66667%; }
+  .col-sm-12 { width: 100%; }
+
+  /* Ajustes de padding */
+  .main-content{ padding-top: 100px; }
+}
+
+/* >= 750px (ajustes intermedios) */
+@media (min-width: 750px){
+  .col-md-4 { width: 33.33333%; }
+  .col-md-6 { width: 50%; }
+  .col-md-8 { width: 66.66667%; }
+}
+
+/* >= 900px: más ancho y comportamiento de columnas */
+@media (min-width: 900px){
+  .col-lg-3 { width: 25%; }
+  .col-lg-4 { width: 33.33333%; }
+  .col-lg-6 { width: 50%; }
+  .col-lg-9 { width: 75%; }
+
+  /* para el layout principal (ejemplo), usar col-9/col-3 si columnas.css no tiene */
+  .col-9 { width: 75%; }
+  .col-3 { width: 25%; }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer{
+  background: var(--brand);
+  color: #fff;
+  padding: 14px 0;
+  margin-top: 30px;
+}
+.footer-inner{
+  overflow: hidden; /* mantiene floats */
+}
+.footer-left{ float: left; }
+.footer-right{ float: right; }
+
+/* limpiar floats en footer para mobile */
+@media (max-width: 599px){
+  .footer-left, .footer-right{
+    float: none;
+    text-align: center;
+  }
+}
+
+/* =========================
+   ACCESIBILIDAD Y PEQUEÑOS AJUSTES
+   ========================= */
+a{ color: inherit; }
+a:focus{ outline: 3px solid rgba(255,107,53,0.25); }
+
+/* FIN de styles.css */

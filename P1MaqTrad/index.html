@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookify — Biblioteca digital</title>
+
+  <!-- CSS del profesor (sistema de columnas pre-Flexbox/Grid) -->
+  <link rel="stylesheet" href="css/columnas.css">
+
+  <!-- Estilos del alumno -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Anchor top (para scroll-to-top con href="#top") -->
+  <a id="top"></a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="img/logo.svg" alt="Bookify logo" width="50" height="50">
+        <span class="brand">Bookify</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content" role="main">
+    <!-- Sección principal -->
+    <section class="hero card">
+      <h1>Bienvenido a Bookify</h1>
+      <p>Tu biblioteca digital con los mejores libros, recursos académicos y préstamos digitales. Descubre títulos destacados, géneros populares y servicios pensados para estudiantes y lectores.</p>
+      <p><a href="#destacados" class="btn">Ver destacados</a></p>
+    </section>
+
+    <!-- Libros Destacados: principal + sidebar -->
+    <section id="destacados" class="row">
+      <div class="col-9 col-sm-8">
+        <article class="card featured-book">
+          <img src="https://picsum.photos/seed/book1/800/450" alt="Libro destacado" width="800" height="450">
+          <div class="card-body">
+            <h2>Libro destacado del mes</h2>
+            <p>Una obra imprescindible para amantes del conocimiento. Résumen breve que anima al usuario a leer más.</p>
+            <ul>
+              <li>Autor: Autor Ejemplo</li>
+              <li>Formato: Digital</li>
+              <li>Descargas disponibles: 120</li>
+            </ul>
+            <p><a href="#" class="btn">Más información</a></p>
+          </div>
+        </article>
+      </div>
+
+      <aside class="col-3 col-sm-4">
+        <div class="card sidebar">
+          <h3>Novedades</h3>
+          <ul class="news-list">
+            <li><strong>Novedad 1</strong><br><small>Mini descripción...</small></li>
+            <li><strong>Novedad 2</strong><br><small>Mini descripción...</small></li>
+            <li><strong>Novedad 3</strong><br><small>Mini descripción...</small></li>
+          </ul>
+        </div>
+
+        <div class="card sidebar">
+          <h3>Top autores</h3>
+          <p>Lista breve de autores más leídos este mes.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Géneros Populares -->
+    <section class="row genres">
+      <div class="col-4 col-sm-4">
+        <article class="card genre-card">
+          <img src="https://picsum.photos/seed/tech/600/350" alt="Tecnología" width="600" height="350">
+          <div class="card-body">
+            <h3>Tecnología</h3>
+            <p>Libros sobre programación, IA y sistemas.</p>
+            <p class="counter">Libros: <strong>124</strong></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-4 col-sm-4">
+        <article class="card genre-card">
+          <img src="https://picsum.photos/seed/science/600/350" alt="Ciencia" width="600" height="350">
+          <div class="card-body">
+            <h3>Ciencia</h3>
+            <p>Divulgación científica y artículos académicos.</p>
+            <p class="counter">Libros: <strong>98</strong></p>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-4 col-sm-4">
+        <article class="card genre-card">
+          <img src="https://picsum.photos/seed/literature/600/350" alt="Literatura" width="600" height="350">
+          <div class="card-body">
+            <h3>Literatura</h3>
+            <p>Clásicos, contemporáneos y narrativa destacada.</p>
+            <p class="counter">Libros: <strong>210</strong></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="services row">
+      <div class="col-6 col-sm-6">
+        <div class="card service-card">
+          <h3>Préstamo Digital</h3>
+          <p>Accede a títulos en préstamo para lectura por tiempo limitado.</p>
+          <ul>
+            <li>Formato ePub / PDF</li>
+            <li>Acceso multiplataforma</li>
+          </ul>
+          <p><a href="#" class="btn btn-secondary">Leer condiciones</a></p>
+        </div>
+      </div>
+
+      <div class="col-6 col-sm-6">
+        <div class="card service-card">
+          <h3>Recursos Académicos</h3>
+          <p>Documentos, papers y material de apoyo para estudios.</p>
+          <ul>
+            <li>Búsqueda avanzada</li>
+            <li>Filtros por área</li>
+          </ul>
+          <p><a href="#" class="btn">Explorar recursos</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="card faq">
+      <h2>Preguntas frecuentes</h2>
+      <dl>
+        <dt>¿Cómo me registro?</dt>
+        <dd>Regístrate con tu email y crea una contraseña segura. Verifica tu cuenta por correo.</dd>
+
+        <dt>¿Cuántos libros puedo descargar?</dt>
+        <dd>Depende del plan. Hay límites para cuentas gratuitas.</dd>
+
+        <dt>¿Es compatible con e-readers?</dt>
+        <dd>Sí, la mayoría de formatos estándar son compatibles.</dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <!-- Scroll to top button (solo visible en escritorio >= 600px) -->
+  <a href="#top" class="scroll-top" aria-label="Volver arriba">↑</a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">Bookify | © 2025</div>
+      <div class="footer-right">Autor: John Doe</div>
+    </div>
+  </footer>
+
+</body>
+</html>
