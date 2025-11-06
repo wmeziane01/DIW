@@ -1,0 +1,110 @@
+:root {
+    --header-bg: #2c3e50;
+    --header-color: #2c3e50;
+    --fuente-principal: Arial, sans-serif;
+  }  
+
+* {
+    box-sizing: border-box;
+  }
+
+  .f-left {
+    float: left;
+  }
+
+.f-right {
+    float: right;
+  }
+  
+  /*FUENTE GOOGLE*/
+  .eagle-lake-regular {
+    font-family: "Eagle Lake", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+/*HEADER*/
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--header-bg);
+    padding: 25px;
+  }
+
+  header a.logo span {
+    color: white;
+    vertical-align: middle;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+
+  header a.logo img {
+    width: 45px;
+    vertical-align: middle;
+  }
+
+  header a.login {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+  }
+  header a.login:hover {
+    background-color: hsl(0, 0%, 0%, 0.6); /*fondo con cierta opacidad usando formato hsl*/
+  }
+
+
+/*MAIN*/
+
+main {
+  background-color: #eee;
+  font-family: var(--fuente-principal);
+}
+
+main .title {
+  margin: 0;
+  text-align: center;
+  padding: 50px;
+  background-color: rgb(167, 158, 158);
+  font-family: Eagle Lake;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+card {
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+
+
+/*LINK DE LA IMAGEN*/
+
+.imagen-con-link {
+  position: relative; 
+  display: block;
+  overflow: hidden;   /* 🔹 Evita que el link se salga del área de la imagen */
+}
+
+.imagen-con-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.link-sobre-imagen {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.link-sobre-imagen:hover {
+  background-color: hsl(211, 100%, 40%);
+}
