@@ -74,7 +74,7 @@ div {
     display: flex;
     /*para que el div containe-centro-2 se coloque a la izquietda en su contenedor padre haré lo siguiente*/
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
   }
   
   #container-centro #container-centro-1 {
@@ -88,28 +88,30 @@ div {
   
   #container-centro #container-centro-2 {
     height: 100px;
-    align-self: center;
+    text-align: center;
     /*este contenedor debe estar alargado en todo el centro*/
     width: 100%;
   }
   
   #container-centro #container-centro-3 {
     border: 0px;
-    align-self: flex-end;
     display: flex;
     /*ahora colocaremos el contenedor a la izquierda*/
-    justify-content: flex-start;
+    flex-direction: row-reverse;
+
   }
   
   #container-centro #container-centro-4 {
     width: 50px;
     height: 50px;
+
     
   }
   
   #container-centro #container-centro-5 {
     width: 50px;
     height: 50px;
+    align-self: flex-end;
   }
   
   #container-centro #container-centro-6 {
@@ -119,12 +121,14 @@ div {
   #container-centro #container-centro-7 {
     width: 50px;
     height: 50px;
+    align-self: center;
   }
   
   #container-centro #container-centro-8 {
     width: 50px;
     height: 50px;
     background-color: lightcoral;
+    flex-grow: 1;
   }
   
   #container-centro #container-centro-9 {
@@ -142,6 +146,7 @@ div {
   #container-dcha #container-dcha-1 {
     height: 50px;
     background-color: lightblue;
+    align-content: flex-end;
   }
   
   #container-dcha #container-dcha-2 {
