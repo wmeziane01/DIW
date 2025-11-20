@@ -4,40 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicios Flex. Ej. 3</title>
+  <title>Ejercicios float y clear. Ej. 3</title>
   <link rel="stylesheet" href="../../../Utils/css/general.css">
 
   <style>
     .container {
       max-width: 900px;
       margin: 0 auto;
-      display: flex;           /* Activamos Flexbox */
+      display: flex;
       flex-wrap: wrap;         /* Permite que los elementos bajen si no caben en una línea */
-      gap: 20px;               /* Espacio entre los elementos */
-    }
-
-    .div1 {
-      padding: 50px;
-      background-color: pink;
-      order: 2;                /* Para que aparezca a la derecha */
-    }
-
-    .div2 {
-      padding: 5px;
-      background-color: aqua;
-      order: 0;                /* Para que aparezca a la izquierda */
+      gap: 20px;
     }
 
     .texto {
       background-color: coral;
-      flex: 1 1 100%;          /* Ocupa toda la fila disponible */
-      order: 1;                 /* Aparece en el medio */
-      padding: 20px;
     }
 
-    /* Opcional: ajustar tamaños de los div flotantes */
-    .div1, .div2 {
-      flex: 0 0 auto;          /* Tamaño fijo según contenido */
+    .div1 {
+      float: right;
+      padding: 50px;
+      background-color: pink;
+      margin-left: 50px;
+    }
+
+    .div2 {
+      float: left;
+      padding: 5px;
+      background-color: aqua;
     }
   </style>
 </head>
@@ -45,16 +38,18 @@
 <body>
 
   <div class="container">
-    <div class="div2">Div2</div>
-    <div class="texto">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsum possimus eius cum a hic excepturi molestias.
-      Neque saepe fugit, placeat dolor autem porro voluptatibus numquam iste reprehenderit molestias ea.
-    </div>
     <div class="div1">Div1</div>
-    <div class="texto">
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem corporis perferendis eos facilis, commodi assumenda
-      et sequi eligendi iure? Officiis tempora labore id expedita asperiores aperiam sint doloribus facere qui
-    </div>
+
+    <div class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ipsum possimus eius cum a hic
+      excepturi molestias. Neque saepe fugit, placeat dolor autem porro voluptatibus numquam iste reprehenderit
+      molestias ea.</div>
+
+    <div class="div2">Div2</div>
+
+    <div style="clear: both;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem corporis perferendis eos
+      facilis, commodi assumenda et sequi eligendi iure? Officiis tempora labore id expedita asperiores aperiam sint
+      doloribus facere qui</div>
+
   </div>
 
 </body>
